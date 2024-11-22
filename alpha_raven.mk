@@ -8,7 +8,7 @@
 TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
-TARGET_HAS_UDFPS := true
+#TARGET_HAS_UDFPS := true
 
 
 # Device config
@@ -32,8 +32,8 @@ TARGET_BUILD_PACKAGE := 3
 # 2 - lawnchair
 # 3 - pixel (valid only on gapps builds)
 # TARGET_LAUNCHER := 2
-TARGET_INCLUDE_PIXEL_LAUNCHER := true
-TARGET_INCLUDE_LAWNCHAIR := true
+
+
 # GAPPS (valid only for GAPPS builds)
 # TARGET_SUPPORTS_CALL_RECORDING := true
 # TARGET_INCLUDE_STOCK_ARCORE := true

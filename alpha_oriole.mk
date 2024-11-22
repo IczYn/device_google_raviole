@@ -8,9 +8,6 @@
 TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
-TARGET_HAS_UDFPS := true
-
-
 # Device config
 TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
@@ -32,8 +29,8 @@ TARGET_BUILD_PACKAGE := 3
 # 2 - lawnchair
 # 3 - pixel (valid only on gapps builds)
 # TARGET_LAUNCHER := 2
-TARGET_INCLUDE_PIXEL_LAUNCHER := true
-TARGET_INCLUDE_LAWNCHAIR := true
+
+
 # GAPPS (valid only for GAPPS builds)
 # TARGET_SUPPORTS_CALL_RECORDING := true
 # TARGET_INCLUDE_STOCK_ARCORE := true
@@ -55,28 +52,29 @@ ALPHA_MAINTAINER := IczYn
 
 
 # Inherit device configuration
-DEVICE_CODENAME := raven
+DEVICE_CODENAME := oriole
 DEVICE_PATH := device/google/raviole
-VENDOR_PATH := vendor/google/raven
+VENDOR_PATH := vendor/google/oriole
 $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
 $(call inherit-product, device/google/gs101/lineage_common.mk)
 $(call inherit-product, $(DEVICE_PATH)/$(DEVICE_CODENAME)/device-lineage.mk)
+
 
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
-PRODUCT_MODEL := Pixel 6 Pro
+PRODUCT_MODEL := Pixel 6
 PRODUCT_NAME := alpha_$(DEVICE_CODENAME)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 3120
-TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="raven-user 15 AP3A.241105.007 12470370 release-keys" \
-    BuildFingerprint=google/raven/raven:15/AP3A.241105.007/12470370:user/release-keys \
+    BuildDesc="oriole-user 15 AP3A.241105.007 12470370 release-keys" \
+    BuildFingerprint=google/oriole/oriole:15/AP3A.241105.007/12470370:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)

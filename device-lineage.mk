@@ -10,7 +10,7 @@ DISABLE_ARTIFACT_PATH_REQUIREMENTS:= true
 
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 
-include vendor/lineage-priv/keys/keys.mk
+#include vendor/lineage-priv/keys/keys.mk
 
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \
@@ -45,3 +45,6 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.dynamic_sensor_hal
+# PixelParts
+include packages/apps/PixelParts/device.mk
+
