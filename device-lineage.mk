@@ -6,10 +6,14 @@
 
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay-lineage
 
+# Use 32-bit libc variant by default
+PRODUCT_USE_SCUDO := true
+PRODUCT_USE_SCUDO_32_BIT := true
+
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \
     ANGLE
-    
+
 # Camera
 $(call inherit-product-if-exists, vendor/google/camera/config.mk)
 
