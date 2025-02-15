@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# PixelParts
+include packages/apps/PixelParts/device.mk
+
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay-lineage
 
 # Use 32-bit libc variant by default
