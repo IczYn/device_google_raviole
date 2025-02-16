@@ -8,6 +8,8 @@
 TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+WITH_GMS  :=  true
+WITH_PIXEL_OVERLAYS := true
 # UDFPS support
 TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
