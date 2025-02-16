@@ -15,7 +15,7 @@ PRODUCT_PACKAGES += \
     ANGLE
 
 # Camera
-$(call inherit-product-if-exists, vendor/google/camera/config.mk)
+#$(call inherit-product-if-exists, vendor/google/camera/config.mk)
 
 # EUICC
 PRODUCT_COPY_FILES += \
